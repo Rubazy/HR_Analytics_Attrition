@@ -1,0 +1,58 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+
+  - name: dim_employee
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+
+
+
+  - name:  dim_satisfaction
+    columns:
+      - name: satisfaction_id
+        tests:
+          - not_null
+          - unique
+
+
+
+  - name: dim_performance
+    columns:
+      - name: performance_id
+        tests:
+          - not_null
+          - unique
+
+
+
+  - name: fact_attrition
+    columns:
+      - name: fact_id
+        tests:
+          - not_null
+          - unique
+
+         
